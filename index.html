@@ -4,15 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Advice Generator</title>
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>hello world</h1>
+  <div class="card">
+    <div class="card__content">
+      <div id="advice__id" class="card__advice"></div>
+      <div id="advice__quote" class="card__quote"></div>
+      <picture class="card__picture">
+        <source srcset="./images/pattern-divider-mobile.svg" media="(max-width:400px)">
+        <img class="card__img" src="./images/pattern-divider-desktop.svg" alt="Icon dice" width="444" height="16">
+      </picture>
+
+      <button class="btn" id="btn">
+        <span class="btn__oval">
+          <img class="btn__img" src="./images/icon-dice.svg" alt="Icon dice" width="24" height="24">
+        </span>
+      </button>
+    </div>
+  </div>
+
   <script src="/js/index.js"></script>
 </body>
 </html>

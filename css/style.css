@@ -6,11 +6,14 @@
   text-decoration: none;
 }
 
-
-/* FONTS */
-
-
 /* CUSTOM PROPS */
+:root {
+  --dark-blue:#202733;
+  --dark-blue-grayish:#313a48;
+  --grayish-blue:#4f5d74;
+  --light-cyan:#cee3e9;
+  --green:#53ffaa;
+}
 
 
 /* GLOBAL */
@@ -29,11 +32,12 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  background-color: #fff;
-  color: #222;
-  font-family: "Arial", sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  font-family: "Manrope", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -42,18 +46,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/* CONTAINER */
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 /* VISUALLY-HIDDEN */
 
@@ -75,25 +67,107 @@ img {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-text-fill-color: var(--heading-color);
-  -webkit-box-shadow: 0 0 0px 40rem #ffff inset;
+-webkit-text-fill-color: var(--heading-color);
+-webkit-box-shadow: 0 0 0px 40rem #ffff inset;
 } */
 
 /* PLACEHOLDER STYLE */
 /*
 ::placeholder {
-  color: rgba(52, 49, 61, 0.5);
+color: rgba(52, 49, 61, 0.5);
 } */
 
-
-
-/* MAIN-CONTENT */
-
-.main-content {
-  flex-grow: 1;
+.card {
+  border-radius: 15px;
+  background-color: var(--dark-blue-grayish);
+  max-width: 540px;
+  width: 100%;
 }
 
+.card__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 48px 48px 72px 48px;
+}
 
+.card__advice {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+  color: var(--green);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4.09px;
+}
+
+.card__quote {
+  height: 150px;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 40px;
+}
+
+.card__picture {
+  display: block;
+}
+
+.card__img {
+  display: block;
+}
+
+.btn__oval {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  bottom: -32px;
+  width: 64px;
+  height: 64px;
+  background-color: var(--green);
+  transform: translateX(-50%);
+}
+
+.btn__oval:hover,
+.btn__oval:active {
+  box-shadow: 0px 0px 40px 0px rgb(83, 255, 170);
+  cursor: pointer;
+}
+
+.btn__img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+@media only screen and (max-width:580px) {
+  .card {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .card__content {
+    padding: 40px 24px 64px;
+  }
+
+  .card__advice {
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.46px;
+  }
+
+  .card__quote {
+    height: auto;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.26px;
+  }
+}
 
 /* RETINA BACKGROUND IMAGES */
 @media
